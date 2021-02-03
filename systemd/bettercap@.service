@@ -1,0 +1,15 @@
+[Unit]
+Description=bettercap %i service.
+Documentation=https://bettercap.org
+Wants=network.target
+After=pwngrid.service
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+ExecStart=/usr/local/bin/bettercap-launcher %i
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
