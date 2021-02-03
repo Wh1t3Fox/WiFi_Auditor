@@ -1,6 +1,7 @@
 # WiFi_Auditor
-My Setup for Auditing Wifi Networks
+Documenting My Setup for Auditing Wifi Networks, and other Fun Wireless Devices
 
+:construction: Work in Progress  :construction: 
 
 ### Hardware
 - Pelican 1400 Case
@@ -12,3 +13,7 @@ My Setup for Auditing Wifi Networks
 - Ubertooth One
 - RTL2832U DVB-T DAB FM & R820T Tuner
 - Bingfu RP-SMA Male to RP-SMA Female x4
+
+### OS Installation 
+Check out [this](https://gist.github.com/XSystem252/d274cd0af836a72ff42d590d59647928) write-up by XSystem
+
