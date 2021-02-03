@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -x
+
+# wlan1 or wlan2
+INTERFACE="$1"
+
+PHY="$(iw dev | grep "$INTERFACE" -B 1 | head -1 | sed 's/#//')"
+device="mon${INTERFACE: -1}"
+
+# Create monitor interface and bring it up
+iw phy "$PHY" interface add "$device" type monitor && ip link set "$device" up
+
+# Patch Kernel for setting Tx Power
+
+# Start Bettercap on the new interface
+/usr/local/bin/bettercap -no-colors -caplet "$device" -iface "$device"
