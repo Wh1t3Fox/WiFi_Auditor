@@ -3,7 +3,7 @@ Documenting My Setup for Auditing Wifi Networks, and other Fun Wireless Devices
 
 :construction: Work in Progress  :construction: 
 
-### Hardware
+## Hardware
 - Pelican 1400 Case
 - RPI 4B 8Gb
   - Argon0ne V2 Case w/ SSD Expansion
@@ -14,6 +14,7 @@ Documenting My Setup for Auditing Wifi Networks, and other Fun Wireless Devices
 - RTL2832U DVB-T DAB FM & R820T Tuner
 - Bingfu RP-SMA Male to RP-SMA Female x4
 
-### OS Installation 
+### 1. OS Installation 
 Check out [this](https://gist.github.com/XSystem252/d274cd0af836a72ff42d590d59647928) write-up by XSystem
 
+### 2. Software
