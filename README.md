@@ -19,6 +19,8 @@ Documenting My Setup for Auditing Wifi Networks, and other Fun Wireless Devices
 - [Unitek 4-Port USB 3.0 Hub](https://amzn.com/B07G9CXSW1)
 - [Anker PowerCore 26800 Portable Charger](https://amzn.com/B01JIWQPMW)
 
+## Setup
+
 ### 1. OS Installation 
 Check out [this](https://gist.github.com/XSystem252/d274cd0af836a72ff42d590d59647928) write-up by XSystem
 
