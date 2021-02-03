@@ -27,3 +27,26 @@ Documenting My Setup for Auditing Wifi Networks, and other Fun Wireless Devices
 Check out [this](https://gist.github.com/XSystem252/d274cd0af836a72ff42d590d59647928) write-up by XSystem
 
 ### 2. Software
+#### Dependencies
+```
+sudo pacman -S --noconfirm base-devel go libpcap libnetfilter_queue libusb gpsd 
+```
+
+#### Wifi
+[bettercap](https://bettercap.org)
+```bash
+go get github.com/bettercap/bettercap
+cd $GOPATH/src/github.com/bettercap/bettercap
+make build
+sudo make install
+sudo bettercap -eval 'caplets.update; ui.update; q'
+```
+
+#### GPS
+
+
+#### Bluetooth
+
+
+#### SDR
+
