@@ -4,8 +4,8 @@ Documenting My Setup for Auditing Wifi Networks, and other Fun Wireless Devices
 :construction: Work in Progress  :construction: 
 
 ## Hardware
-- Pelican 1400 Case
-- RPI 4B 8Gb
+- [Pelican 1400 Case](https://amzn.com/B00009XVKY)
+- [RPI 4B 8Gb](https://amzn.com/B08956GVXN)
   - [Argon0ne V2 Case](https://amzn.com/B07WP8WC3V) w/ [SSD Expansion](https://amzn.com/B08MHYWJCP)
   - [WD 500GB Blue M2 SSD](https://amzn.com/B073SBX6TY)
   - [256Gb SanDisk Ultra Micro SD](https://amzn.com/B08GY8NHF2)
