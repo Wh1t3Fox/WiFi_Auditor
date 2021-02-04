@@ -28,11 +28,32 @@ Check out [this](https://gist.github.com/XSystem252/d274cd0af836a72ff42d590d5964
 
 ### 2. Software
 #### Dependencies
-```
-sudo pacman -S --noconfirm base-devel go libpcap libnetfilter_queue libusb gpsd 
+```bash
+sudo pacman -S --noconfirm base-devel git go libpcap libnetfilter_queue libusb gpsd 
 ```
 
-#### Wifi
+[yay](https://github.com/Jguer/yay)
+```bash
+git clone https://aur.archlinux.org/yay.git
+cd yay && makepkg -si
+```
+
+[archstrike](https://archstrike.org/)
+```bash
+sudo su -
+echo -e '[archstrike]\nServer = https://mirror.archstrike.org/$arch/$repo' >> /etc/pacman.conf
+pacman -Syy
+pacman-key --init
+dirmngr < /dev/null
+pacman-key -r 9D5F1C051D146843CDA4858BDE64825E7CBC0D51
+pacman-key --lsign-key 9D5F1C051D146843CDA4858BDE64825E7CBC0D51
+pacman -S archstrike-keyring
+pacman -S archstrike-mirrorlist
+sed -i 's|Server = https://mirror.archstrike.org/$arch/$repo|Include = /etc/pacman.d/archstrike-mirrorlist|' /etc/pacman.conf
+pacman -Syy
+```
+
+#### Wifi Tools
 [bettercap](https://bettercap.org)
 ```bash
 go get github.com/bettercap/bettercap
@@ -45,11 +66,8 @@ sudo cp ./bin/bettercap-launcher /usr/local/bin/
 sudo cp ./systemd/bettercap@.service /etc/systemd/system/
 ```
 
-#### GPS
+#### Bluetooth Tools
 
 
-#### Bluetooth
-
-
-#### SDR
+#### SDR Tools
 
