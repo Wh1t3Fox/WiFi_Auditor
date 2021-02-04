@@ -40,6 +40,9 @@ cd $GOPATH/src/github.com/bettercap/bettercap
 make build
 sudo make install
 sudo bettercap -eval 'caplets.update; ui.update; q'
+sudo cp ./caplets/* /usr/local/share/bettercap/caplets
+sudo cp ./bin/bettercap-launcher /usr/local/bin/
+sudo cp ./systemd/bettercap@.service /etc/systemd/system/
 ```
 
 #### GPS
